@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenRouter Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <nav class="nav" aria-label="Main navigation">
+            <a href="#" class="logo">🖼️ OpenRouter ImgGen</a>
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#generator" class="nav-link">Generator</a></li>
+                <li><a href="#models" class="nav-link">Models</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home / Landing Section -->
+        <section id="home" class="section hero">
+            <div class="container">
+                <h1>Generate Stunning Images with OpenRouter AI</h1>
+                <p class="subtitle">Choose a model, describe your vision, and let AI create the perfect picture.</p>
+                <a href="#generator" class="btn primary">Start Generating</a>
+            </div>
+        </section>
+
+        <!-- Image Generator Section -->
+        <section id="generator" class="section generator">
+            <div class="container">
+                <h2>Image Generator</h2>
+                <form id="gen-form" class="gen-form" autocomplete="off">
+                    <label for="prompt">Prompt</label>
+                    <textarea id="prompt" name="prompt" rows="3" placeholder="A futuristic city at sunset, ultra‑realistic" required></textarea>
+
+                    <label for="model-select">Model</label>
+                    <select id="model-select" name="model">
+                        <option value="openrouter/clipdrop-stable-diffusion">ClipDrop SD</option>
+                        <option value="openrouter/stable-diffusion-xl">Stable Diffusion XL</option>
+                        <option value="openrouter/dalle-mini">DALL·E Mini</option>
+                        <option value="openrouter/midjourney-lite">Midjourney Lite</option>
+                    </select>
+
+                    <button type="submit" class="btn primary generate-btn">
+                        <span class="btn-text">Generate</span>
+                        <span class="spinner hidden" aria-hidden="true"></span>
+                    </button>
+                </form>
+
+                <div class="preview-area hidden" id="preview-area">
+                    <h3>Result</h3>
+                    <div class="image-wrapper">
+                        <img id="result-image" src="" alt="Generated result">
+                    </div>
+                    <a id="download-btn" class="btn secondary" download="generated.png">Download</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Model Catalog Section -->
+        <section id="models" class="section catalog">
+            <div class="container">
+                <h2>Model Catalog</h2>
+                <p>Explore the free models available through OpenRouter. All models are ready to use with no extra cost.</p>
+                <ul class="model-list">
+                    <li>
+                        <h3>ClipDrop Stable Diffusion</h3>
+                        <p>Fast, high‑quality diffusion model suitable for a wide range of styles.</p>
+                    </li>
+                    <li>
+                        <h3>Stable Diffusion XL</h3>
+                        <p>Next‑generation diffusion model offering higher resolution and detail.</p>
+                    </li>
+                    <li>
+                        <h3>DALL·E Mini</h3>
+                        <p>Compact model delivering quick, imaginative results.</p>
+                    </li>
+                    <li>
+                        <h3>Midjourney Lite</h3>
+                        <p>Creative‑focused model tuned for artistic outputs.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQ / Help Section -->
+        <section id="faq" class="section faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="accordion">
+                    <details>
+                        <summary>Is this service really free?</summary>
+                        <p>All listed models are provided by OpenRouter at no cost. Usage limits are defined by OpenRouter.</p>
+                    </details>
+                    <details>
+                        <summary>What image size will I get?</summary>
+                        <p>The generator returns a 800×600 px image. You can resize after download.</p>
+                    </details>
+                    <details>
+                        <summary>Can I use the images commercially?</summary>
+                        <p>Check each model’s licensing terms on OpenRouter. Generally, images generated with free models are royalty‑free for personal use.</p>
+                    </details>
+                    <details>
+                        <summary>How does the prompt affect the result?</summary>
+                        <p>The prompt guides the AI. The more descriptive you are, the better the output aligns with your vision.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 OpenRouter Image Generator – Made with ❤️ by the community.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
